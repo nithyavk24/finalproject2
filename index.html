@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> PROGRAMMING ASSIGNMENT </title>
+    </head>
+    <body>
+        <header>
+            <h1>COMPUTER GRAPHICS <br> HOUSE </h1>
+        </header>
+        <link rel="stylesheet" href="./style.css">
+        <script src="./main.js"></script>
+
+        <div id="maindiv" class="clearfix">
+            <div id="divfront" style="float:left;width:50%; "> 
+                <div id="divfrontsvg" style="overflow:hidden"> 
+                <h4>FRONT </h4>
+                    <svg id="front" height="400" width="900">	
+                        <rect x="116" y="134" width="30" height="37"
+                        style="fill:brown;stroke:black;stroke-width:2;fill-opacity:0.1;stroke-opacity:0.9;transform :'translate(200,100)'" />
+                        <rect x="174" y="134" width="30" height="37"
+                        style="fill:brown;stroke:black;stroke-width:2;fill-opacity:0.1;stroke-opacity:0.9" />
+                    
+                        <line x1="100" y1="133" x2="100" y2="252" style="stroke:black;stroke-width:2" />
+                        <line x1="221" y1="252" x2="98" y2="252" style="stroke:black;stroke-width:2" />
+                        <line x1="163" y1="83" x2="240" y2="149" style="stroke:black;stroke-width:2" />
+                        <line x1="165" y1="83" x2="83" y2="149" style="stroke:black;stroke-width:2" />
+                        <line x1="219" y1="133" x2="219" y2="252" style="stroke:black;stroke-width:2" />
+
+                        <line x1="185" y1="49" x2="185" y2="100" style="stroke:black;stroke-width:2" />
+                        <line x1="210" y1="49" x2="210" y2="125" style="stroke:black;stroke-width:2" />
+                        <line x1="212" y1="49" x2="183" y2="49" style="stroke:black;stroke-width:2" />
+
+                        <circle cx="131" cy="153" r="13" stroke="black" stroke-width="2" fill="white" />
+                        <circle cx="135" cy="157" r="7" stroke="black" stroke-width="2" fill="black" />
+                    
+                        <circle cx="189" cy="153" r="13" stroke="black" stroke-width="2" fill="white" />
+                        <circle cx="193" cy="157" r="7" stroke="black" stroke-width="2" fill="black" />
+
+                        <path d="M 143 205 C 121 235, 195 241, 182 205" stroke-width="2" stroke="black" fill="transparent"/>
+                        <line x1="143" y1="205" x2="182" y2="205" style="stroke:black;stroke-width:2" />
+                    </svg> 
+                </div>
+
+                <div id="divfronttrans" style="padding-left: 30px; padding-bottom: 30px"> 
+                    Translate : <input type="range" id="trans" min="100" max="400"value="100" onchange="front_translate(this.value)">
+                    Value : <input id="fronttranslate" type="text" name="fname" value="100"><br>
+                    
+                    Scale : <input type="range" id="trans"  min="1" max="2" step='0.05' value="1" onchange="front_scale(this.value)">
+                    Value : <input id="frontscale" type="text" name="fname" value="1"><br>
+
+                    Rotate : <input type="range" id="trans"  min="0" max="360"value="0" onchange="front_rotate(this.value)">
+                    Value : <input id="frontrotate" type="text" name="fname" value="0 deg"><br>
+                    
+                    Shear : <input type="range" id="trans"  min="0" max="360"value="0" onchange="front_shear(this.value)">
+                    Value : <input id="frontshear" type="text" name="fname" value="0 deg"><br>
+                                        
+                </div>
+            </div>
+
+            <div id="divside" style="float:left;width:50%;">
+                <div id="divsidesvg" style="overflow:hidden"> 
+                <h4>SIDE </h4>
+                    <svg id="side" width="900" height="400">	
+                        <rect x="145" y="70" width="150" height="72"
+                        style="fill:white;stroke:black;stroke-width:2;fill-opacity:0.1;stroke-opacity:0.9" />
+                        <rect x="171" y="142" width="100" height="110"
+                        style="fill:white;stroke:black;stroke-width:2;fill-opacity:0.1;stroke-opacity:0.9" />
+                        <rect x="188" y="49" width="67" height="20"
+                        style="fill:white;stroke:black;stroke-width:2;fill-opacity:0.1;stroke-opacity:0.9" />
+
+                        <rect x="182" y="159" width="30" height="37"
+                        style="fill:brown;stroke:black;stroke-width:2;fill-opacity:0.1;stroke-opacity:0.9" />
+                        <rect x="230" y="159" width="30" height="37"
+                        style="fill:brown;stroke:black;stroke-width:2;fill-opacity:0.1;stroke-opacity:0.9" />					  
+                    </svg>
+                </div>
+                <div id="divsidetrans" style="padding-left: 30px; padding-bottom: 30px"> 
+                    Translate : <input type="range" id="trans" min="100" max="360"value="100" onchange="side_translate(this.value)">
+                    Value : <input id="sidetranslate" type="text" name="fname" value="100"><br>        
+                    
+                    Scale : <input type="range" id="rrans"  min="1" max="2" step='0.05' value="1" onchange="side_scale(this.value)">
+                    Value : <input id="sidescale" type="text" name="fname" value="1"><br>
+                    
+                    Rotate : <input type="range" id="trans"  min="0" max="360"value="0" onchange="side_rotate(this.value)">
+                    Value : <input id="siderotate" type="text" name="fname" value="0 deg"><br>
+                    
+                    Shear : <input type="range" id="trans"  min="0" max="360"value="0" onchange="side_shear(this.value)">
+                    Value : <input id="sideshear" type="text" name="fname" value="0 deg"><br>  
+                                         
+                </div>
+            </div>
+
+            <div id="divtop" style="float:left;width:50%;">
+                <div id="divtopsvg" style="overflow:hidden"> 
+                <h4>TOP</h4>
+                    <svg id="top" height="400" width="900">	
+                        <rect x="80" y="175" width="173" height="133"
+                        style="fill:white;stroke:black;stroke-width:2;fill-opacity:0.1;stroke-opacity:0.9" />
+                        
+                        <line x1="162" y1="174" x2="162" y2="310" style="stroke:rgb(8, 8, 8);stroke-width:2" />
+                        
+                        <rect x="192" y="222" width="30" height="37"
+                        style="fill:brown;stroke:black;stroke-width:2;fill-opacity:0.1;stroke-opacity:0.9" />
+                        
+                        <path d="M10 10"/>
+                    </svg> 
+                </div>
+
+                <div id="divtoptrans" style="padding-left: 30px; padding-bottom: 30px"> 
+                        <span style="display: inline-box">
+                        Translate : </span><input type="range" id="trans" min="100" max="400"value="100" onchange="top_translate(this.value)"><span style="display: inline-box">   
+                        Value : </span><input id="toptranslate" type="text" name="fname" value="100"><br>
+                        
+                        Scale : <input type="range" id="trans" min="1" max="2" step='0.05' value="1" onchange="top_scale(this.value)">
+                        Value : <input id="topscale" type="text" name="fname" value="1"><br>
+
+                        Rotate : <input type="range" id="trans"  min="0" max="360"value="0" onchange="top_rotate(this.value)">
+                        Value : <input id="toprotate" type="text" name="fname" value="0 deg"><br>
+                        
+                        Shear : <input type="range" id="trans"  min="0" max="360"value="0" onchange="top_shear(this.value)">
+                        Value : <input id="topshear" type="text" name="fname" value="0 deg"><br>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>
+ 
